@@ -1,0 +1,340 @@
+import java.util.*;
+public class FirstClass {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int button = sc.nextInt();
+
+        if(button == 1){         //If Else
+            System.out.println("Good");
+        }
+        else if(button==2){
+            System.out.println("better");
+        }
+        else if(button==3){
+            System.out.println("Best");
+        }else{
+            System.out.println("Invalid button");
+        }
+        switch (button){         //Switch
+            case 1:
+                System.out.printf("Hello");
+                break;
+            case 2:
+                System.out.println("Namaste");
+                break;
+            case 3:
+                System.out.println("Rubbish");
+                break;
+            case 4:
+                System.out.println("Bonjour");
+                break;
+            default:
+                System.out.println("Inavlid");
+        }
+        
+         int b = sc.nextInt();        //For Loop
+        for(int counter = 0; counter < b; counter++)
+        {
+            System.out.print(counter+" ");
+        }
+        int i = 0;
+        while(i<b){
+            System.out.println("Hello");
+            i++;
+        }
+
+
+        Scanner sc = new Scanner(System.in);    //Do while
+        int b = sc.nextInt();
+        int i = 0;
+        do{
+            System.out.println("Hello");
+            i++;
+        }while (i<b);
+
+
+
+         Scanner sc = new Scanner(System.in);       //Sum of n no's
+        int b = sc.nextInt();
+        int sum =0;
+        for(int i=1;i<=b;i++){
+            sum= sum+i;
+        }
+        System.out.println(sum);
+
+
+        Scanner sc = new Scanner(System.in);        //Multiples of 2
+        int b = sc.nextInt();
+        for(int i=1;i<11;i++){
+            System.out.println(i*b);
+        }
+
+
+         Scanner sc = new Scanner(System.in);       //Star Pattern 4*5
+        int b = sc.nextInt();
+        for (int i=1;i<=b;i++){
+            for (int j=1;j<10;j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+
+
+        Scanner sc = new Scanner(System.in);        //Hollow rectangle
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        for(int i = 1;i<=a;i++)
+        {
+            for(int j=1;j<=b;j++){
+                if(i==1||j==1||i==a||j==b){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();   //for next line only
+        }
+
+
+        Scanner sc = new Scanner(System.in);            //Half Pyramid
+        int a = sc.nextInt();
+        for(int i = 1;i<=a;i++)
+        {
+            for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+            System.out.println();
+            }
+
+
+
+
+
+            Scanner sc = new Scanner(System.in);  //Inverted half pyram
+        int a = sc.nextInt();
+        for(int i = n;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+            System.out.println();
+            }
+
+
+
+            Scanner sc = new Scanner(System.in);       //180^ Half Pyr
+        int b = sc.nextInt();
+        for(int i=1;i<=b;i++){
+            for(int j=1;j<=b-i;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+
+
+        Scanner sc = new Scanner(System.in);       //Half Pyr No's
+        int b = sc.nextInt();
+        for (int i = 1; i <= b; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+
+        }
+
+
+
+
+         Scanner sc = new Scanner(System.in);       //Half Pyr No's rev
+        int b = sc.nextInt();
+        for (int i = 1; i <= b; i++) {
+            for (int j = 1; j <= b-i+1; j++) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+
+        }
+
+
+
+        Scanner sc = new Scanner(System.in);        //Floyd's Triangle
+        int b = sc.nextInt();
+        int num =1;
+        for(int i=1; i<=b;i++){
+            for(int j=1 ;j<=i;j++){
+                System.out.print(num);
+                num++;
+            }
+            System.out.println();
+        }
+
+
+
+
+         Scanner sc = new Scanner(System.in);   //Bit Pyramid
+        int b = sc.nextInt();
+        for(int i=1;i<=b;i++){
+            for (int j=1;j<=i;j++){
+               int sum = i+j;
+                if(sum%2==0){
+                    System.out.print("1 ");
+                }
+                else{
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+
+
+
+
+
+         Scanner sc =new Scanner(System.in);    //Butterfly Pattern
+       int n =sc.nextInt();
+       //Upper Half
+        for(int i=1;i<=n;i++){
+            //First half
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //First half spaces
+            int spaces = 2*(n-i);
+            for(int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            //Second half
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //Lower Half
+        for(int i=n;i>=1;i--){
+            //First half
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //First half spaces
+            int spaces = 2*(n-i);
+            for(int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            //Second half
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);  //Solid Rhombus
+       int n= sc.nextInt();
+       for(int i=1; i<=n;i++){
+           for(int j=1;j<=n-i;j++){
+               System.out.print(" ");
+           }
+           for (int j=1;j<=n;j++){
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+
+
+
+
+
+
+
+
+         Scanner sc = new Scanner(System.in);       //Hollow Rohmbus
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            if (i == 1 || i == n) {
+                for (int j = 1; j <= n; j++) {
+                    System.out.print("*");
+                }
+            } else {
+                for (int j = 1; j <= n; j++) {
+                    if (j == 1 || j == n) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);   //Palindromic pattern
+        int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            //Print spaces
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //print first half numbers
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            //print second half numbers
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);    //Diamond Pattern
+        int n = sc.nextInt();
+        //Upper Half
+        for(int i=1;i<=n;i++){
+            //Print spaces
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //print stars
+            int stars= 2*i-1;
+            for(int j=1;j<=stars;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        //Lower Half
+        for(int i=n;i>=1;i--){
+            //Print spaces
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //print stars
+            int stars= 2*i-1;
+            for(int j=1;j<=stars;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+}
